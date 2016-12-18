@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1fb6e0f58bbbc2344ae7fd248ea86e21
+timeCreated: 1482092985
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aspire
+  fontNames:
+  - Aspire
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
