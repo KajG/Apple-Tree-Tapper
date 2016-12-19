@@ -6,9 +6,9 @@ using UnityEngine;
 public class Upgrade1 : UpgradeMain {
 	
 	override protected void Start () {
-		bought = false;
 		button = button.GetComponent<Button> ();
 		score = score.GetComponent<ScoreController> ();
+		text = text.GetComponent<Text> ();
 	}
 	
 	override public void onClick(){
@@ -18,7 +18,13 @@ public class Upgrade1 : UpgradeMain {
 			score.getScore -= price;
 			score.getScoreAmount += cashMultiplier;
 			this.enabled = false;
+			text.color = Color.red;
 		}
+	}
+	override protected void Update(){
+		if (score.getScore >= price && !bought) {
+			text.color = Color.green;
+		} 
 	}
 
 }

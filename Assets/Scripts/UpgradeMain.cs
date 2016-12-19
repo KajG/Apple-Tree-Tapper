@@ -8,9 +8,11 @@ public abstract class UpgradeMain : MonoBehaviour {
 	protected int price;
 	[SerializeField]
 	protected int cashMultiplier;
-	protected bool bought;
+	protected bool bought = false;
+	public Text text;
 	public ScoreController score;
 	public Button button;
 	abstract protected void Start ();
+	abstract protected void Update ();
 	abstract public void onClick ();
 }
