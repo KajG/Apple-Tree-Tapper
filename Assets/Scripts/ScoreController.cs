@@ -8,6 +8,8 @@ public class ScoreController : MonoBehaviour {
 	public Text scoreText;
 	[SerializeField]
 	private int score;
+	public int getScore{get{return score;}set{score = value;}}
+	public int getScoreAmount{get{return scoreAmount;}set{scoreAmount = value;}}
 	[SerializeField]
 	private int scoreAmount;
 	[SerializeField]

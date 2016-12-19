@@ -4,14 +4,13 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public abstract class UpgradeMain : MonoBehaviour {
-
+	[SerializeField]
 	protected int price;
 	[SerializeField]
-	Button button;
+	protected int cashMultiplier;
+	protected bool bought;
+	public ScoreController score;
+	public Button button;
 	abstract protected void Start ();
-
-
-
-	abstract protected void onClick ();
-		
+	abstract public void onClick ();
 }
