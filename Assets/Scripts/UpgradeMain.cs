@@ -7,8 +7,9 @@ public abstract class UpgradeMain : MonoBehaviour {
 	[SerializeField]
 	protected int price;
 	[SerializeField]
-	protected int cashMultiplier;
 	protected bool bought = false;
+	[SerializeField]
+	protected float buttonMoneyEffect;
 	public Text text;
 	public ScoreController score;
 	public Button button;

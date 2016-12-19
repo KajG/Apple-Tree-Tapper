@@ -16,9 +16,9 @@ public class Upgrade1 : UpgradeMain {
 			print (score.getScore);
 			bought = true;
 			score.getScore -= price;
-			score.getScoreAmount += cashMultiplier;
 			this.enabled = false;
 			text.color = Color.red;
+			score.scoreMultiplier += buttonMoneyEffect;
 		}
 	}
 	override protected void Update(){

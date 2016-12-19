@@ -13,7 +13,7 @@ public class CreateApple : MonoBehaviour {
 	public int maxAppleCount;
 	private Vector3 randomPos;
 	private CircleCollider2D _col;
-	public int amount;
+	public int appleAmount;
 	void Start () {
 		_col = GetComponent<CircleCollider2D> ();
 	}
@@ -25,13 +25,11 @@ public class CreateApple : MonoBehaviour {
 	}
 	public void MouseClick(){
 		if (_apples.Count <= maxAppleCount) {
-			//randomPos = new Vector3 (_col.transform.position.x + Random.Range (_col.radius * -1,_col.radius),_col.transform.position.y +  + _col.offset.y + Random.Range (_col.radius * -1,_col.radius),0);
-			print (_col.radius);
 			SpawnApple ();
 		}
 	}
 	void SpawnApple(){
-		for (int i = 0; i < amount; i++) {
+		for (int i = 0; i < appleAmount; i++) {
 			randomPos = new Vector3 (_col.transform.position.x + Random.Range (_col.radius * -1,_col.radius),_col.transform.position.y +  + _col.offset.y + Random.Range (_col.radius * -1,_col.radius),0);
 			_appleInst = Instantiate (apple, randomPos, Quaternion.identity);
 			_apples.Add (_appleInst);
