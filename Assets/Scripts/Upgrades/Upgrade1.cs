@@ -24,7 +24,10 @@ public class Upgrade1 : UpgradeMain {
 	override protected void Update(){
 		if (score.getScore >= price && !bought) {
 			text.color = Color.green;
-		} 
+		} else {
+			text.color = Color.red;
+		}
+
 	}
 
 }
