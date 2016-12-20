@@ -11,16 +11,16 @@ public class ScoreController : MonoBehaviour {
 	public float getScore{get{return score;}set{score = value;}}
 	public CreateApple appleAmount;
 	[SerializeField]
-	public float scoreMultiplier;
+	public float scoreMultiplier = 1;
 
 	void Start () {
 		appleAmount = appleAmount.GetComponent<CreateApple> ();
 	}
 	
-	void Update () {
-		scoreText.text = ("Money: " + score + "$");
+	void Update () { //laat scoren zien
+		scoreText.text = ("Money: " + Mathf.RoundToInt(score) + "$");
 	}
-	public void Score(){
-		score += appleAmount.appleAmount * ((scoreMultiplier + 1) * 1);
+	public void GetScore(){ // add je score elke keer als je klikt
+		score += appleAmount.appleAmount * scoreMultiplier;
 	}
 }

@@ -19,17 +19,17 @@ public class CreateApple : MonoBehaviour {
 	}
 
 	void Update () { 
-		if (_apples.Count >= maxAppleCount) {
+		if (_apples.Count >= maxAppleCount) { // als er teveel apples zijn
 			RemoveApple ();
 		}
 	}
 	public void MouseClick(){
-		if (_apples.Count <= maxAppleCount) {
+		if (_apples.Count <= maxAppleCount) { // als er niet genoeg apples zijn kan je ze laten spawnen
 			SpawnApple ();
 		}
 	}
 	void SpawnApple(){
-		for (int i = 0; i < appleAmount; i++) {
+		for (int i = 0; i < appleAmount; i++) { //loopt zoveel keer als amount is, dit zorgt ervoor dat je 3 apples tegelijk kan laten spawnen
 			randomPos = new Vector3 (_col.transform.position.x + Random.Range (_col.radius * -1,_col.radius),_col.transform.position.y +  + _col.offset.y + Random.Range (_col.radius * -1,_col.radius),0);
 			_appleInst = Instantiate (apple, randomPos, Quaternion.identity);
 			_apples.Add (_appleInst);

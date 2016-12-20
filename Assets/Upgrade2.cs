@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Upgrade1 : UpgradeMain {
-	
+public class Upgrade2 : UpgradeMain {
+
 	override protected void Start () {
 		button = button.GetComponent<Button> ();
 		score = score.GetComponent<ScoreController> ();
