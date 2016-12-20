@@ -6,6 +6,7 @@ public class ScoreController : MonoBehaviour {
 
 	public CreateApple appleCount;
 	public Text scoreText;
+	public Text multiplierText;
 	[SerializeField]
 	private float score;
 	public float getScore{get{return score;}set{score = value;}}
@@ -18,6 +19,7 @@ public class ScoreController : MonoBehaviour {
 	}
 	
 	void Update () { //laat scoren zien
+		multiplierText.text = ("Multiplier: " + scoreMultiplier + "x");
 		scoreText.text = ("Money: " + Mathf.RoundToInt(score) + "$");
 	}
 	public void GetScore(){ // add je score elke keer als je klikt

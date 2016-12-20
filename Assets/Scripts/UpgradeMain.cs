@@ -10,9 +10,11 @@ public abstract class UpgradeMain : MonoBehaviour {
 	protected bool bought = false;
 	[SerializeField]
 	protected float increaseMoneyAmount;
-	public Text text;
-	public ScoreController score;
-	public Button button;
+	public Text Text;
+	public Text Pricetag;
+	public ScoreController Score;
+	public CreateApple Createapple;
+	public Button Button;
 	abstract protected void Start ();
 	abstract protected void Update ();
 	abstract public void onClick ();

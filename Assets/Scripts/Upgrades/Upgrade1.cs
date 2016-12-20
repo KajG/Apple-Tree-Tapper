@@ -6,25 +6,29 @@ using UnityEngine;
 public class Upgrade1 : UpgradeMain {
 	
 	override protected void Start () {
-		button = button.GetComponent<Button> ();
-		score = score.GetComponent<ScoreController> ();
-		text = text.GetComponent<Text> ();
+		Button = Button.GetComponent<Button> ();
+		Score = Score.GetComponent<ScoreController> ();
+		Createapple = Createapple.GetComponent<CreateApple> ();
+		Text = Text.GetComponent<Text> ();
+		Pricetag = Pricetag.GetComponent<Text> ();
 	}
 	override public void onClick(){
-		if (score.getScore >= price && !bought) { //Wanner je genoeg hebt om je upgrade te kopen
-			print (score.getScore);
+		if (Score.getScore >= price && !bought) { //Wanneer je genoeg hebt om je upgrade te kopen
+			print (Score.getScore);
 			bought = true;
-			score.getScore -= price;
+			Score.getScore -= price;
 			this.enabled = false;
-			text.color = Color.red;
-			score.scoreMultiplier += increaseMoneyAmount;
+			//Text.color = Color.red;
+			//Score.scoreMultiplier += increaseMoneyAmount;
 		}
 	}
-	override protected void Update(){ //kleur button
-		if (score.getScore >= price && !bought) {
-			text.color = Color.green;
-		} else {
-			text.color = Color.red;
+	override protected void Update(){ //kleur Button
+		if (Score.getScore >= price && !bought) {
+			Text.color = Color.green;
+		} 
+		if(Score.getScore <= price){
+			Text.color = Color.red;
 		}
+		Pricetag.text = (price + "$"); // houd de prijs bij
 	}
 }
